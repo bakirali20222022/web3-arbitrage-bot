@@ -1,18 +1,20 @@
-# web3-arbitrage-bot
-Repository for Web3 arbitrage and liquidation bot development using Solidity and automated tools
-Project: Web3 Arbitrage and Liquidation Bot
-Description:
-This repository showcases an automated trading system designed for the Web3 ecosystem. The project focuses on the development and optimization of arbitrage and liquidation bots to interact with decentralized protocols like Aave.
+# Web3 Arbitrage and Liquidation Bot
 
-Key Technical Features:
+This repository contains the architecture and implementation details for an automated trading system designed for the Web3 ecosystem. The project focuses on the development and optimization of high-performance arbitrage and liquidation bots.
 
-Smart Contract Development: Utilizes Solidity for custom ArbitrageExecutor contracts (V1-V4).
+## Project Overview
+The bot is designed to interact efficiently with decentralized finance (DeFi) protocols, such as Aave, to capitalize on market inefficiencies and manage positions through flash loans.
 
-Automation Logic: Engineered with Web3.py and integrated with automated scheduling tools for real-time execution.
+## Key Technical Features
+- **Smart Contract Development**: Implementation of custom `ArbitrageExecutor` contracts (versions V1-V4) written in **Solidity**.
+- **Automation Engine**: Built using **Web3.py** for robust blockchain interaction and integrated with automated task scheduling to ensure real-time execution.
+- **Protocol Integration**: Designed for seamless interaction with protocols on **Polygon** and **Ethereum** networks, including advanced logic for flash loan utilization.
+- **Performance Optimization**: Continuous refinement of trading execution algorithms to ensure speed and minimize latency.
 
-Protocol Integration: Designed to interact with flash loans and margin trading platforms, ensuring efficient interaction with the Polygon and Ethereum networks.
+## Technical Stack
+- **Languages**: Solidity, Python (Web3.py).
+- **Networks**: Ethereum, Polygon.
+- **Tools**: Hardhat, Automated execution scripts.
 
-Performance Optimization: Continuous monitoring and optimization of trading execution logic to minimize latency.
-
-Status:
-Currently under active development and optimization for high-performance execution environments.
+---
+*Status: Under active development and optimization.*
