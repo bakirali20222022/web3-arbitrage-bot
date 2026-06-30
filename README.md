@@ -1,20 +1,57 @@
-# Web3 Arbitrage and Liquidation Bot
+# Sample Hardhat 3 Project (`mocha` and `ethers`)
 
-This repository contains the architecture and implementation details for an automated trading system designed for the Web3 ecosystem. The project focuses on the development and optimization of high-performance arbitrage and liquidation bots.
+This project showcases a Hardhat 3 project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+
+To learn more about Hardhat 3, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3](https://hardhat.org/hardhat3-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
 
 ## Project Overview
-The bot is designed to interact efficiently with decentralized finance (DeFi) protocols, such as Aave, to capitalize on market inefficiencies and manage positions through flash loans.
 
-## Key Technical Features
-- **Smart Contract Development**: Implementation of custom `ArbitrageExecutor` contracts (versions V1-V4) written in **Solidity**.
-- **Automation Engine**: Built using **Web3.py** for robust blockchain interaction and integrated with automated task scheduling to ensure real-time execution.
-- **Protocol Integration**: Designed for seamless interaction with protocols on **Polygon** and **Ethereum** networks, including advanced logic for flash loan utilization.
-- **Performance Optimization**: Continuous refinement of trading execution algorithms to ensure speed and minimize latency.
+This example project includes:
 
-## Technical Stack
-- **Languages**: Solidity, Python (Web3.py).
-- **Networks**: Ethereum, Polygon.
-- **Tools**: Hardhat, Automated execution scripts.
+- A simple Hardhat configuration file.
+- Foundry-compatible Solidity unit tests.
+- TypeScript integration tests using `mocha` and ethers.js
+- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
 
----
-*Status: Under active development and optimization.*
+## Usage
+
+### Running Tests
+
+To run all the tests in the project, execute the following command:
+
+```shell
+npx hardhat test
+```
+
+You can also selectively run the Solidity or `mocha` tests:
+
+```shell
+npx hardhat test solidity
+npx hardhat test mocha
+```
+
+### Make a deployment to Sepolia
+
+This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
+
+To run the deployment to a local chain:
+
+```shell
+npx hardhat ignition deploy ignition/modules/Counter.ts
+```
+
+To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
+
+You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
+
+To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
+
+```shell
+npx hardhat keystore set SEPOLIA_PRIVATE_KEY
+```
+
+After setting the variable, you can run the deployment with the Sepolia network:
+
+```shell
+npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
+```
